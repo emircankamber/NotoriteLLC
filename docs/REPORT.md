@@ -76,7 +76,7 @@ Screenshots: [form errors](screenshots/form-errors-1440.png), [success](screensh
 | ~~`config.js` → `CONTACT_EMAIL`~~ | Done: info@notoritellc.com |
 | `config.js` → `FORM_ENDPOINT` (+ `FORM_EXTRA_FIELDS`) | Formspree or Web3Forms. See the README. |
 | `config.js` → `STATE_OF_FORMATION` | Optional. Hidden until filled. (`PHONE` and `ADDRESS` are done.) |
-| `index.html`, `privacy.html`, `robots.txt`, `sitemap.xml` | Replace `https://example.com/` with the live domain (canonical, OG/Twitter, JSON-LD, sitemap). |
+| ~~Live domain~~ | Done: https://notoritellc.com/ in canonical, OG/Twitter, JSON-LD, robots and sitemap |
 | `privacy.html` | Draft: review by the owner or counsel, including the "Last updated" date and which form provider is used. |
 
 Note: Lighthouse's cache and compression findings on the local Python server do not apply on Vercel, which compresses responses and uses the cache headers in `vercel.json`.

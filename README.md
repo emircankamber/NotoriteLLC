@@ -83,8 +83,9 @@ Fields sent: `name, company, email, phone, business_type, categories, quantities
 npx vercel --prod
 ```
 
-After you connect the real domain, replace every `https://example.com/` with it in:
-`index.html` (canonical, Open Graph, Twitter, JSON-LD), `privacy.html` (canonical), `robots.txt` and `sitemap.xml`.
+The live domain is **https://notoritellc.com/**. It is used in `index.html` (canonical, Open Graph, Twitter, JSON-LD), `privacy.html` (canonical), `robots.txt` and `sitemap.xml`. If the domain ever changes, update those four files.
+
+In Vercel, add `notoritellc.com` under *Settings → Domains* and let it redirect `www.notoritellc.com` to it.
 
 ## Brand tokens (in `assets/css/styles.css`)
 
@@ -108,5 +109,6 @@ Spacing: 8px scale only (`--s-1` 8 … `--s-8` 128).
 - [ ] `CONTACT_EMAIL` (needed for the mailto fallback and the privacy page)
 - [ ] `FORM_ENDPOINT` (+ `FORM_EXTRA_FIELDS` for Web3Forms), then send a test request
 - [ ] `PHONE`, `ADDRESS`, `STATE_OF_FORMATION` (optional, hidden until filled)
-- [ ] Replace `https://example.com/` with the live domain (files listed above)
+- [x] Live domain set to `https://notoritellc.com/`
+- [ ] Add `notoritellc.com` (and the `www` redirect) in Vercel → Settings → Domains
 - [ ] Have the owner or counsel review `privacy.html`, including the "Last updated" date
