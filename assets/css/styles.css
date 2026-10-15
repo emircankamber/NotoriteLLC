@@ -213,15 +213,15 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* Hero load-in: staggered, motion-safe only */
 @media (prefers-reduced-motion: no-preference) {
-  .js [data-hero] { opacity: 0; transform: translateY(var(--s-3)); animation: rise 800ms var(--ease) forwards; }
-  .js [data-hero]:nth-child(1) { animation-delay: 60ms; }
-  .js [data-hero]:nth-child(2) { animation-delay: 160ms; }
-  .js [data-hero]:nth-child(3) { animation-delay: 280ms; }
-  .js [data-hero]:nth-child(4) { animation-delay: 400ms; }
-  .js .hero-media img { animation: settle 1400ms var(--ease) both; }
+  .js [data-hero] { opacity: 0; transform: translateY(var(--s-2)); animation: rise 500ms var(--ease) forwards; }
+  .js [data-hero]:nth-child(2) { animation-delay: 50ms; }
+  .js [data-hero]:nth-child(3) { animation-delay: 100ms; }
+  .js [data-hero]:nth-child(4) { animation-delay: 150ms; }
+  /* Photo is visible immediately (no fade) so it paints as soon as it loads */
+  .js .hero-media img { animation: settle 900ms var(--ease) both; }
 }
 @keyframes rise { to { opacity: 1; transform: none; } }
-@keyframes settle { from { opacity: 0; transform: scale(1.03); } to { opacity: 1; transform: none; } }
+@keyframes settle { from { transform: scale(1.02); } to { transform: none; } }
 
 /* ---------- Sections ---------- */
 .section { padding-block: var(--s-7); }
@@ -454,10 +454,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* ---------- Scroll reveal (JS adds .js; disabled for reduced motion) ---------- */
 @media (prefers-reduced-motion: no-preference) {
-  .js [data-reveal] { opacity: 0; transform: translateY(var(--s-2)); transition: opacity 600ms var(--ease), transform 600ms var(--ease); }
-  .js [data-reveal="major"] { transform: translateY(var(--s-5)); transition-duration: 1000ms; }
+  .js [data-reveal] { opacity: 0; transform: translateY(var(--s-2)); transition: opacity 400ms var(--ease), transform 400ms var(--ease); }
+  .js [data-reveal="major"] { transform: translateY(var(--s-4)); transition-duration: 600ms; }
   .js [data-reveal].is-visible { opacity: 1; transform: none; }
-  .js .card[data-reveal].is-visible { transition: opacity 1000ms var(--ease), transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out; }
+  .js .card[data-reveal].is-visible { transition: opacity 600ms var(--ease), transform 200ms ease-out, box-shadow 200ms ease-out, border-color 200ms ease-out; }
   .js .card[data-reveal].is-visible:hover { transform: translateY(-4px); }
 }
 

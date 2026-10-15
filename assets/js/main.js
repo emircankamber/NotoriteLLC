@@ -87,8 +87,8 @@
         // Stagger siblings that enter together; major elements wait slightly longer
         var siblings = Array.prototype.filter.call(el.parentElement.children, function (c) { return c.hasAttribute("data-reveal"); });
         var index = Math.max(0, siblings.indexOf(el));
-        var step = el.getAttribute("data-reveal") === "major" ? 120 : 80;
-        el.style.transitionDelay = Math.min(index * step, 480) + "ms";
+        var step = el.getAttribute("data-reveal") === "major" ? 60 : 40;
+        el.style.transitionDelay = Math.min(index * step, 240) + "ms";
         el.classList.add("is-visible");
         el.addEventListener("transitionend", function clear() {
           el.style.transitionDelay = "";
@@ -96,7 +96,7 @@
         });
         io.unobserve(el);
       });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    }, { rootMargin: "0px 0px 10% 0px", threshold: 0 });
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
